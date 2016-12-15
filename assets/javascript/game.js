@@ -22,61 +22,90 @@ var chrystalGame = {
 
 ///////////////////////////////////////////
 //start game when start button is pressed
-$("#begin").click(chrystalGame.setValues());
-console.log(chrystalGame.value);
+//$("#begin").click(chrystalGame.setValues());
+//console.log(chrystalGame.value);
+$("#begin").click(function(){
 //display target score
+chrystalGame.setValues();
+//chrystalGame.totalScore = 0;
 $("#targetScore").html("Target Score:  " + chrystalGame.value);
+$("#yourScore").html("Your Score:  " + chrystalGame.totalScore);
 
-
-
-/*if($("#diamond").data('clicked')) {
-    chrystalGame.totalScore += chrystalGame.diamondValue;
-    $("yourScore").html("Your Score:  " + chrystalGame.totalScore); 
-}*/
 //if ruby chrystal is clicked
 $("#ruby").click(function(){
    chrystalGame.totalScore += chrystalGame.rubyValue; 
-   $("#yourScore").html("Your Score" + chrystalGame.totalScore);
+   $("#yourScore").html("Your Score:  " + chrystalGame.totalScore);
+    //see if you won
+   if(chrystalGame.value === chrystalGame.totalScore){
+	  	chrystalGame.wins++;
+	  	$("#wins").html("Wins:  " + chrystalGame.wins);
+	  	$("#message").html("Click begin to play again");
+	}
+//see if you lost
+	if(chrystalGame.totalScore > chrystalGame.value){
+		chrystalGame.losses++;
+		$("#losses").html("Losses:  " + chrystalGame.losses);
+		$("#message").html("Click begin to play again");
+	}    
 });
-   console.log(chrystalGame.rubyValue);
-   console.log(chrystalGame.totalScore);
+   
 //if diamond chrystal is clicked
-$('#diamond').click(function(){
+$("#diamond").click(function(){
    chrystalGame.totalScore += chrystalGame.diamondValue; 
-   $("#yourScore").html("Your Score" + chrystalGame.totalScore);
-   console.log(chrystalGame.diamondValue);
-   console.log(chrystalGame.totalScore);
+   $("#yourScore").html("Your Score:  " + chrystalGame.totalScore);
+    //see if you won
+	if(chrystalGame.value === chrystalGame.totalScore){
+		chrystalGame.wins++;
+		$("#wins").html("Wins:  " + chrystalGame.wins);
+		$("#message").html("Click begin to play again");
+	}
+//see if you lost
+	if(chrystalGame.totalScore > chrystalGame.value){
+		chrystalGame.losses++;
+		$("#losses").html("Losses:  " + chrystalGame.losses);
+		$("#message").html("Click begin to play again");
+}
 });
 
 //if saphire chrystal is clicked
 $("#saphire").click(function(){
    chrystalGame.totalScore += chrystalGame.saphireValue; 
-   $("#yourScore").html("Your Score" + chrystalGame.totalScore);
+   $("#yourScore").html("Your Score:  " + chrystalGame.totalScore);
+   //see if you won
+	if(chrystalGame.value === chrystalGame.totalScore){
+		chrystalGame.wins++;
+		$("#wins").html("Wins  :" + chrystalGame.wins);
+		$("#message").html("Click begin to play again");
+	}
+//see if you lost
+	if(chrystalGame.totalScore > chrystalGame.value){
+		chrystalGame.losses++;
+		$("#losses").html("Losses:  " + chrystalGame.losses);
+		$("#message").html("Click begin to play again");
+	}
 });
 
-console.log(chrystalGame.saphireValue);
-console.log(chrystalGame.totalScore);
 //if emerald chrystal is clicked
 $("#emerald").click(function(){
     chrystalGame.totalScore += chrystalGame.emeraldValue;
-    $("#yourScore").html("Your Score" + chrystalGame.totalScore); 
-});
-console.log(chrystalGame.emeraldValue);
-console.log(chrystalGame.totalScore);
-//see if you won
-if(chrystalGame.value === chrystalGame.totalScore){
-	chrystalGame.wins++;
-	$("#wins").html("Wins  :" + wins);
-	chrystalGame.setValues();
-	$("#message").html("Click begin to play again");
-}
+    $("#yourScore").html("Your Score:  " + chrystalGame.totalScore); 
+    //see if you won
+	if(chrystalGame.value === chrystalGame.totalScore){
+		chrystalGame.wins++;
+		$("#wins").html("Wins  :" + chrystalGame.wins);
+		$("#message").html("Click begin to play again");
+	}
 //see if you lost
-if(chrystalGame.totalScore > chrystalGame.value){
-	chrystalGame.losses++;
-	$("#losses").html("Losses" + losses);
-	chrystalGame.setValues();
-	$("#message").html("Click begin to play again");
-}
+	if(chrystalGame.totalScore > chrystalGame.value){
+		chrystalGame.losses++;
+		$("#losses").html("Losses:  " + chrystalGame.losses);
+		$("#message").html("Click begin to play again");
+	}
+});
+//end of click function
+});
+
+
 
 
 
