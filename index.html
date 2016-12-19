@@ -3,28 +3,38 @@
 <head>
 	<title>Chrystal game</title>
 	 
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="assets\css\style.css">
 </head>
 <body>
-
+<div id="container">
+	<h1>Chrystal Game</h1>
+	<p id="directions">
+		Click the begin button to start the game.  Then click the chrystals below to until you have mached the target score or gone over.
+		Click the begin button to play again.
+	</p>
 	<button id="begin">Press to begin a game</button>
 	<br>
 	<br>
     <div id="targetScore">Target Score</div>
     <br>
-	<button id="diamond">Diamond</button>
-	<button id="saphire">Saphire</button>
-	<button id="ruby">Ruby</button>
-	<button id="emerald">Emerald</button>
+	<img scr="http://weknowyourdreams.com/images/diamond/diamond-02.jpg" alt="diamond" id="diamond" height="150px" width="150px">
+	<img scr="http://www.ringswithlove.com/wp-content/uploads/2010/12/1-natural-untreated-ruby-U3284.jpg" 
+	 alt="ruby" id="ruby" height="150px" width="150px">
+	<img scr="https://upload.wikimedia.org/wikipedia/en/f/f7/Sapphire.png" alt="saphire" id="saphire" height="150px" width="150px">
+	<img scr="http://weknowyourdreams.com/image.php?pic=/images/emerald/emerald-08.jpg" alt="emerald" id="emerald" height="150px" width="150px">
+	
 	<br>
 	<br>
 	<div id="yourScore">Your Score</div>
 	<br>
+	
 	<div id="wins">Wins</div>
 	<br>
 	<div id="losses">Losses</div>
+	
 	<h2 id="message"></h2>
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
 	 <script src="assets/javascript/game.js"></script>
+</div>	 
 </body>
 </html>

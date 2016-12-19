@@ -1,0 +1,43 @@
+.container{
+	width: 500px;
+	background: #FAEBD7;
+}
+
+h1{
+	background: orange;
+	width: 220px;
+}
+
+.targetScore{
+	height: 50px;
+	width: 50px;
+	background: #FAEBD7;
+}
+
+body{
+	background: #d3d3d3;
+}
+
+p{
+	background: #E9967A;
+	width: 600px;
+	height: 50px;
+}
+
+.winsandlosses{
+	height: 100px;
+	width: 100px;
+	background: #E9967A;
+}
+
+.wins{
+	height: 100px;
+	width: 100px;
+	background: #E9967A;
+}
+
+.losses{
+	height: 100px;
+	width: 100px;
+	background: #E9967A;
+}
