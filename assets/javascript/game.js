@@ -26,7 +26,7 @@ $("#begin").click(function(){
 	chrystalGame.setValues();
 	$("#targetScore").html("Target Score:  " + chrystalGame.value);
 	$("#yourScore").html("Your Score:  " + chrystalGame.totalScore);
-
+    $("#message").html(" ");
 });
 	//if ruby chrystal is clicked
 	$("#ruby").click(function(){

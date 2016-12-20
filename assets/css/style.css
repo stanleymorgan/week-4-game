@@ -1,6 +1,11 @@
-.container{
-	width: 500px;
+#container{
+	width: 550px;
 	background: #FAEBD7;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	margin-bottom: auto;
+	border: solid black 2px;
 }
 
 h1{
@@ -8,11 +13,8 @@ h1{
 	width: 220px;
 }
 
-.targetScore{
-	height: 50px;
-	width: 50px;
-	background: #FAEBD7;
-}
+
+
 
 body{
 	background: #d3d3d3;
@@ -20,24 +22,39 @@ body{
 
 p{
 	background: #E9967A;
-	width: 600px;
-	height: 50px;
+	width: 550px;
+	height: 60px;
+	align-content: center;
 }
 
-.winsandlosses{
+
+
+
+#winsandlosses{
 	height: 100px;
 	width: 100px;
-	background: #E9967A;
+	background: #ADFF2F;
+	border: solid black 3px;
+	margin-left: 2px;
 }
 
-.wins{
-	height: 100px;
-	width: 100px;
-	background: #E9967A;
+#begin{
+	background: #ADFF2F;
 }
 
-.losses{
-	height: 100px;
+
+
+
+#yourScore{
+	font-size: 18;
+	background: #7FFFD4;
 	width: 100px;
-	background: #E9967A;
+	border: solid black 2px;
+}
+
+#targetScore{
+	font-size: 18;
+	width: 100px;
+	background: #7FFFD4;
+	border: solid black 2px;
 }
